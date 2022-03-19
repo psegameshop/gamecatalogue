@@ -1,0 +1,45 @@
+:root{
+	--pse-bg: #fff;
+	--pse-color: #f5deb3;
+	--pse-nav-1: #00a3ff;
+	--pse-footer: #333;
+}
+
+
+body{
+	background-color: var(--pse-bg);
+	/*background-image:url('../assets/img/bg-base.webp');*/
+	background-position: center top;
+	font-size: 1.25rem;
+	font-family: Nunito, serif;
+}
+
+.lounge-banner{
+	background-color: var(--pse-nav-1);
+	color: white;
+	text-transform: uppercase;
+	font-size: 75%;
+}
+
+.logo{
+	height: 60px;
+}
+
+.game-image{
+	min-width:100%;
+}
+
+.game-image::before {
+	content: '';
+	display: block;
+	padding-top: 87.6%;
+}
+
+.game-title-container{
+  display: flex;
+  align-items: center;
+}
+
+footer{
+	background-color: var(--pse-footer);
+}
