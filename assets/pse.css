@@ -14,6 +14,10 @@ body{
 	font-family: Nunito, serif;
 }
 
+.console-button{
+	width:100%;
+}
+
 .lounge-banner{
 	background-color: var(--pse-nav-1);
 	color: white;
