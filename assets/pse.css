@@ -26,7 +26,7 @@ body{
     padding: 0.5rem 1rem;
 }
 
-.search-container .btn{
+.btn.full-width{
     width: 100%;
 	margin-top: 0.5rem;
 	}
