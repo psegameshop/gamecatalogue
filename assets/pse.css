@@ -17,9 +17,23 @@
 	transition: all 0.4s ease;
 }
 
+/*bootstrap extra*/
+.bd-placeholder-img {
+	font-size: 1.125rem;
+	text-anchor: middle;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
+  }
+
+  @media (min-width: 768px) {
+	.bd-placeholder-img-lg {
+	  font-size: 3.5rem;
+	}
+}
+
 body{
 	background-color: var(--pse-bg);
-	/*background-image:url('../assets/img/bg-base.webp');*/
 	background-position: center top;
 	font-size: var(--pse-font-size);
 	font-family: Nunito, serif;
