@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Search and Filter Divs</title>
+    <style>
+        .container {
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+        .buttons-container {
+            margin: 10px 0;
+        }
+        .buttons-container button {
+            margin-right: 5px;
+            padding: 5px 10px;
+            border: none;
+            cursor: pointer;
+            background-color: #f0f0f0;
+        }
+        .buttons-container button.active {
+            background-color: #007BFF;
+            color: white;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="searchInput" placeholder="Search..." onkeyup="filterDivs()">
+    <button onclick="clearSearch()">Clear</button>
+
+    <div class="buttons-container">
+        <button onclick="filterByCategory('all')" id="allBtn" class="active">All</button>
+        <button onclick="filterByCategory('Fruits')" id="fruitsBtn">Fruits</button>
+        <button onclick="filterByCategory('Cars')" id="carsBtn">Cars</button>
+        <button onclick="filterByCategory('Animals')" id="animalsBtn">Animals</button>
+    </div>
+
+    <div class="container" data-category="Fruits">Apple</div>
+    <div class="container" data-category="Fruits">Banana</div>
+    <div class="container" data-category="Animals">Cat</div>
+    <div class="container" data-category="Cars">Dodge</div>
+    <div class="container" data-category="Animals">Elephant</div>
+    <div class="container" data-category="Cars">Ferrari</div>
+
+    <script>
+        let currentCategory = 'all';
+
+        function filterDivs() {
+            var input, filter, divs, i, txtValue;
+            input = document.getElementById('searchInput');
+            filter = input.value.toUpperCase();
+            divs = document.getElementsByClassName('container');
+            
+            for (i = 0; i < divs.length; i++) {
+                txtValue = divs[i].textContent || divs[i].innerText;
+                let categoryMatch = (currentCategory === 'all' || divs[i].getAttribute('data-category') === currentCategory);
+                let textMatch = txtValue.toUpperCase().indexOf(filter) > -1;
+
+                if (categoryMatch && textMatch) {
+                    divs[i].style.display = "";
+                } else {
+                    divs[i].style.display = "none";
+                }
+            }
+        }
+
+        function clearSearch() {
+            document.getElementById('searchInput').value = '';
+            filterDivs();
+        }
+
+        function filterByCategory(category) {
+            currentCategory = category;
+            updateActiveButton(category);
+            filterDivs();
+        }
+
+        function updateActiveButton(category) {
+            let buttons = document.querySelectorAll('.buttons-container button');
+            buttons.forEach(button => button.classList.remove('active'));
+
+            let buttonId = category === 'all' ? 'allBtn' : category.toLowerCase() + 'Btn';
+            document.getElementById(buttonId).classList.add('active');
+        }
+    </script>
+</body>
+</html>

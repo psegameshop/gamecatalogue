@@ -1,8 +1,16 @@
 :root{
-	--pse-bg: #fff;
+	--pse-bg: #e8f2f7;
+	--pse-text: #303131;
 	--pse-color: #f5deb3;
 	--pse-nav-1: #00a3ff;
 	--pse-footer: #333;
+	--pse-emboss-bg: #e1ecf5;
+	--pse-emboss-border: #d2deeb;
+	--pse-emboss-highlight: #f4f8fa;
+	--pse-secondary-btn: #eff7fa;
+	--pse-secondary-btn-text: #707e93;
+	--pse-font-size: 1rem;
+	--pse-gradient: linear-gradient(90deg, rgba(0,166,255,1) 0%, rgba(199,255,216,1) 100%);
 }
 
 * {
@@ -13,8 +21,9 @@ body{
 	background-color: var(--pse-bg);
 	/*background-image:url('../assets/img/bg-base.webp');*/
 	background-position: center top;
-	font-size: 1.25rem;
+	font-size: var(--pse-font-size);
 	font-family: Nunito, serif;
+	color: var(--pse-text);
 }
 
 .disabled{
@@ -22,11 +31,63 @@ body{
 	filter: grayscale(100%);
 }
 
-.search-container input{
+.nav-container{
+	border-bottom: 2px solid var(--pse-emboss-border);
+}
+
+.nav-item{
+	border-left: 1px solid var(--pse-emboss-border);
+	border-right: 1px solid var(--pse-emboss-border);
+	text-transform: uppercase;
+	font-weight: 700;
+	letter-spacing: 0.1rem;
+	font-size: 90%;
+}
+
+.splash-container{
+	font-weight: 700;
+}
+
+.splash-border{
+	width: 100%;
+	background-image: var(--pse-gradient);
+	padding: 2px;
+}
+
+h1{
+	font-weight: 700;
+}
+
+.search-magnify{
     width: 100%;
-    border: 1px solid var(--pse-footer);
-    border-radius: 16px;
+    border: 2px solid var(--pse-emboss-border);
+	border-right-color: var(--pse-emboss-highlight);
+	border-bottom-color: var(--pse-emboss-highlight);
+	background-color: var(--pse-emboss-bg);
+    border-radius: 80px;
     padding: 0.5rem 1rem;
+}
+
+.search-magnify input{
+	width: 95%;
+	border: none;
+	background: none;
+}
+
+.search-magnify input:focus{
+	transition-duration: 0s;
+    outline: none;
+}
+
+.btn-primary{
+	border-radius: 16px 8px 16px 8px;
+}
+
+.btn-secondary{
+	border-radius: 80px;
+	background-color: var(--pse-secondary-btn);
+	color: var(--pse-secondary-btn-text);
+	font-size: 100%;
 }
 
 .btn.full-width{
@@ -36,6 +97,29 @@ body{
 
 .buttons-container button{
 	margin-top: 0.5rem;
+}
+
+button.active {
+	box-shadow: 0 0 0 .25rem rgba(130, 138, 145, .5);
+}
+
+button[id*="rcmd"]{
+	background-image: linear-gradient(174deg, #ffdf80 50%, var(--pse-secondary-btn) 51%);
+    border-color: #ffbf00;
+	width: calc(50% - 0.5rem);
+}
+
+button[id*="rcmd"]:hover, button[id*="rcmd"]:focus, button[id*="rcmd"]:active, button[id*="rcmd"].active {
+	background-image: linear-gradient(174deg, #ffbf00 50%, #ffbf00 51%);
+}
+
+button[id*="rcmd"]:hover{
+	border-color: #ffdf80;
+}
+
+button[id*="rcmd"]:focus, button[id*="rcmd"]:active, button[id*="rcmd"].active {
+	border-color: #ffdf80;
+	box-shadow: 0 0 0 .25rem rgba(255, 191, 0, .5);
 }
 
 .console-button{
