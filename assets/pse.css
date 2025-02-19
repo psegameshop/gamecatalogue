@@ -83,7 +83,7 @@ h1{
 }
 
 .search-magnify input{
-	width: 95%;
+	width: calc(100% - 27px);
 	border: none;
 	background: none;
 }
