@@ -136,6 +136,27 @@ button[id*="rcmd"]:focus, button[id*="rcmd"]:active, button[id*="rcmd"].active {
 	box-shadow: 0 0 0 .25rem rgba(255, 191, 0, .5);
 }
 
+
+button[id*="new-game"]{
+	background-image: linear-gradient(174deg, #80FFA0 50%, var(--pse-secondary-btn) 51%);
+    border-color: #00b32d;
+	width: calc(50% - 0.5rem);
+}
+
+button[id*="new-game"]:hover, button[id*="new-game"]:focus, button[id*="new-game"]:active, button[id*="new-game"].active {
+	background-image: linear-gradient(174deg, #00b32d 50%, #00b32d 51%);
+}
+
+button[id*="new-game"]:hover{
+	border-color: #80FFA0;
+}
+
+button[id*="new-game"]:focus, button[id*="new-game"]:active, button[id*="new-game"].active {
+	border-color: #80FFA0;
+	box-shadow: 0 0 0 .25rem rgba(0, 128, 32, .5);
+}
+
+
 .console-button{
 	width:100%;
 }
