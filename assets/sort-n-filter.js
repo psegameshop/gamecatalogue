@@ -1,36 +1,56 @@
 let currentCategory = 'all';
 
-        function filterDivs() {
-            var input, filter, divs, i, txtValue;
-            input = document.getElementById('searchInput');
-            filter = input.value.toUpperCase();
-            divs = document.getElementsByClassName('filter-target');
-            
-            for (i = 0; i < divs.length; i++) {
-                txtValue = divs[i].textContent || divs[i].innerText;
-                let categories = divs[i].getAttribute('data-category').split(','); // Convert categories into an array
+function initializeReleaseLabels() {
+  const containers = Array.from(document.querySelectorAll('.filter-target'));
+  const today = new Date();
 
-                let categoryMatch = (currentCategory === 'all' || categories.includes(currentCategory));
-                let textMatch = txtValue.toUpperCase().indexOf(filter) > -1;
+  // Convert and filter only those with a date on or before today
+  const pastOrTodayItems = containers
+    .filter(div => {
+      const itemDate = new Date(div.dataset.date);
+      return itemDate <= today;
+    })
+    .sort((a, b) => new Date(b.dataset.date) - new Date(a.dataset.date));
 
-                if (categoryMatch && textMatch) {
-                    divs[i].style.display = "";
-                } else {
-                    divs[i].style.display = "none";
-                }
-            }
-        }
+  // Tag top 12 as "new-release"
+  pastOrTodayItems.slice(0, 12).forEach(div => {
+    div.dataset.category += ',new-release';
+  });
 
-        function clearSearch() {
-            document.getElementById('searchInput').value = '';
-            filterDivs();
-        }
+  // Tag future-dated items as "pre-order"
+  containers.forEach(div => {
+    const itemDate = new Date(div.dataset.date);
+    if (itemDate > today) {
+      div.dataset.category += ',pre-order';
+    }
+  });
+}
 
-        function filterByCategory(category) {
-            currentCategory = category;
-            updateActiveButton(category);
-            filterDivs();
-        }
+    function filterDivs() {
+      const input = document.getElementById('searchInput');
+      const filter = input.value.toUpperCase();
+      const divs = document.getElementsByClassName('filter-target');
+
+      for (let i = 0; i < divs.length; i++) {
+        const txtValue = divs[i].textContent || divs[i].innerText;
+        const categories = divs[i].getAttribute('data-category').split(',');
+        const categoryMatch = (currentCategory === 'all' || categories.includes(currentCategory));
+        const textMatch = txtValue.toUpperCase().indexOf(filter) > -1;
+
+        divs[i].style.display = (categoryMatch && textMatch) ? "" : "none";
+      }
+    }
+
+    function clearSearch() {
+      document.getElementById('searchInput').value = '';
+      filterByCategory('all');
+    }
+
+    function filterByCategory(category) {
+      currentCategory = category;
+      updateActiveButton(category);
+      filterDivs();
+    }
 
         function updateActiveButton(category) {
             let buttons = document.querySelectorAll('.buttons-container button');
@@ -39,3 +59,9 @@ let currentCategory = 'all';
             let buttonId = category === 'all' ? 'allBtn' : category.toLowerCase() + 'Btn';
             document.getElementById(buttonId).classList.add('active');
         }
+
+    // Run on page load
+    window.onload = function () {
+      initializeReleaseLabels();
+      filterDivs();
+    };
