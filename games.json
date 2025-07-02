@@ -1,0 +1,14 @@
+[
+  {
+    title: "Bendy and the Dark Revival",
+    category: "survival-horror",
+    date: "2025-09-26",
+    image: "./assets/img/bendy-and-the-dark-revival-cover.avif"
+  },
+  {
+    title: "Resident Evil 9",
+    category: "survival-horror",
+    date: "2025-11-15",
+    image: "./assets/img/re9-cover.avif"
+  }
+];

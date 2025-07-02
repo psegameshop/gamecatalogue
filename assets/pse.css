@@ -201,6 +201,11 @@ button[id*="pre-order"]:focus, button[id*="pre-order"]:active, button[id*="pre-o
 	border-radius: 0.5rem;
 }
 
+#gameList{
+	margin-left: auto;
+    margin-right: auto;
+}
+
 .btn-po {
 	background-color: var(--pse-nav-1);
 	padding: 0rem 0.25rem;
