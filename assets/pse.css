@@ -3,6 +3,7 @@
 	--pse-text: #303131;
 	--pse-color: #f5deb3;
 	--pse-nav-1: #00a3ff;
+	--pse-color-1:#0d6efd;
 	--pse-footer: #333;
 	--pse-emboss-bg: #e1ecf5;
 	--pse-emboss-border: #d2deeb;
@@ -245,10 +246,107 @@ div[data-category*="pre-order"] figure > .game-image{
 }
 */
 
-.game-title-container{
-  display: flex;
-  align-items: center;
+.game-image-container > figure{
+	margin: 0;
 }
+
+.game-title-container{
+	display: flex;
+	align-items: flex-start;
+	flex-direction: column;
+}
+
+/* CFW Exclusive Styles */
+
+#storageSelect {
+	width: 100%;
+	border: 2px solid var(--pse-emboss-border);
+	border-right-color: var(--pse-emboss-highlight);
+	border-bottom-color: var(--pse-emboss-highlight);
+	background-color: var(--pse-emboss-bg);
+	border-radius: 0.5rem;
+	padding: 0.5rem;
+}
+
+#selectedGames {
+    width: 100%;
+    border: 2px solid var(--pse-emboss-border);
+	border-right-color: var(--pse-emboss-highlight);
+	border-bottom-color: var(--pse-emboss-highlight);
+	background-color: var(--pse-emboss-bg);
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+}
+
+#selectedGames:empty::before {
+  content: "No games selected yet!";
+  display: block;
+  font-style: italic;
+  color: #777;
+}
+
+
+.selected-game {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border: 1px solid;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    background-color: var(--pse-secondary-btn);
+    color: var(--pse-secondary-btn-text);
+}
+
+.selected-game button {
+    border: 0;
+    border-radius: 0.5rem;
+	min-width: 1.5rem;
+    background-color: #fd0d6e;
+	color: white;
+}
+
+.game-container.selected figure{
+    /*outline: 3px solid var(--pse-color-1);*/
+	border: 0.5rem solid var(--pse-color-1);
+	border-radius: 1rem;
+}
+
+.game-container.selected-over figure{
+    /*outline: 3px solid #fd0d6e;*/
+	border: 0.5rem solid #fd0d6e;
+	border-radius: 1rem;
+}
+
+.game-container.selected-over figure img{
+    /*outline: 3px solid #fd0d6e;*/
+	filter:grayscale();
+	margin-top: -1rem;
+}
+
+.game-container.selected figure img,
+.game-container.selected-over figure img{
+	transition: all 0.0s ease;
+}
+
+.game-container.selected-over figure::before{
+	content: 'Not enough free space!';
+	display: block;
+	color: white;
+	text-transform: uppercase;
+	font-weight: 700;
+	letter-spacing: 0.1rem;
+	text-align: center;
+	height: 1rem;
+	font-size: 80%;
+	width: 100%;
+	background-color: #fd0d6e;
+	z-index: 1;
+    position: relative;
+}
+
 
 footer{
 	background-color: var(--pse-footer);
