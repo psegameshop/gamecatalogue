@@ -215,13 +215,30 @@ button[id*="pre-order"]:focus, button[id*="pre-order"]:active, button[id*="pre-o
 	margin-right: 0.2rem;
 }
 
+.lite-ng-warning figure,
 div[data-category*="pre-order"] figure {
-	border: 1rem solid var(--pse-nav-1);
+	border: 1rem solid;
 	border-radius: 0.5rem;
+}
+
+.lite-ng-warning figure{
+	border-color: #ffa300;
+}
+
+div[data-category*="pre-order"] figure{
+	border-color: var(--pse-nav-1);
+}
+
+.lite-ng-warning figure::before {
+	content: "Not Recommended for Lite";
 }
 
 div[data-category*="pre-order"] figure::before {
 	content: 'Pre-Order';
+}
+
+.lite-ng-warning figure::before,
+div[data-category*="pre-order"] figure::before {
 	display: block;
 	color: white;
 	text-transform: uppercase;
@@ -234,9 +251,15 @@ div[data-category*="pre-order"] figure::before {
 	width: 100%;
 }
 
+.lite-ng-warning figure > .game-image,
 div[data-category*="pre-order"] figure > .game-image{
 	border-radius: 0rem;
 }
+
+.lite-ng-warning figure > .game-image{
+	filter:grayscale(100%);
+}
+
 
 /*
 .game-image::before {
@@ -258,8 +281,7 @@ div[data-category*="pre-order"] figure > .game-image{
 
 /* CFW Exclusive Styles */
 
-#storageSelect {
-	width: 100%;
+.pse-select {
 	border: 2px solid var(--pse-emboss-border);
 	border-right-color: var(--pse-emboss-highlight);
 	border-bottom-color: var(--pse-emboss-highlight);
@@ -308,6 +330,28 @@ div[data-category*="pre-order"] figure > .game-image{
 	color: white;
 }
 
+#storageSummary{
+	text-align:right;
+}
+
+#storageInfo{
+	font-size: calc(var(--pse-font-size) * 1.5);
+}
+
+#selectedSize{
+	font-size: calc(var(--pse-font-size) * 1.25);
+}
+
+#storageWarning{
+	background-color: #fd0d6e;
+	color: white;
+	border-radius: 0.5rem;
+	text-align: center;
+	border: 0.25rem solid #ffbf00;
+	height: 3rem;
+	line-height: 2.5;
+}
+
 .game-container.selected figure{
     /*outline: 3px solid var(--pse-color-1);*/
 	border: 0.5rem solid var(--pse-color-1);
@@ -345,6 +389,12 @@ div[data-category*="pre-order"] figure > .game-image{
 	background-color: #fd0d6e;
 	z-index: 1;
     position: relative;
+}
+
+#noResults > div {
+    font-size: calc(var(--pse-font-size) * 2);
+    text-align: center;
+    text-shadow: .1rem .1rem #ddd;
 }
 
 

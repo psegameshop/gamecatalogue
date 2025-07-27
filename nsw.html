@@ -3,14 +3,22 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
     <title>PS Enterprise - Switch Game Catalogue</title>
-
     <link rel="icon" type="image/png" href="favicon.png">
-
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/album/">
+    <link rel="canonical" href="https://psegameshop.github.io/gamecatalogue/nsw.html">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito">
     
+    <meta name="description" content="PS Enterprise's Nintendo Switch game list">
+    <meta property="og:title" content="PS Enterprise - Switch Game Catalogue">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="./assets/img/nav/hero-banner-nsw.webp">
+    <meta property="og:url" content="https://psegameshop.github.io/gamecatalogue/nsw.html">
+    <meta property="og:description" content="Checkout our Nintendo Switch games!">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="PS Enterprise - Switch Game Catalogue">
+    <meta name="twitter:description" content="Checkout our Nintendo Switch games!">
+    <meta name="twitter:image" content="./assets/img/nav/hero-banner-nsw.webp">
 
     <!-- Bootstrap core CSS -->
     <link href="./assets/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -22,25 +30,8 @@
       <div class="text-center lounge-banner py-1">
         <span class="">PLAY FOR FREE @ PSe Sony PlayLounge</span>
       </div>
-      <div class="nav-container pt-3 pb-3 mb-3">
-          <ul class="nav nav-pills nav-fill">
-            <li class="nav-item">
-              <a class="nav-link" href="index.html">🏠 Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" aria-current="page" href="nsw.html">Switch</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="nsw2.html">Switch 2</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="ps4.html">PlayStation 4</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="ps5.html">PlayStation 5</a>
-            </li>
-          </ul>
-      </div>
+      <div id="nav-top-container" class="nav-container pt-3 pb-3 mb-3"></div>
+      <script src="./assets/nav-top.js"></script>
     </header>
 
     <main>
@@ -61,57 +52,15 @@
             </div>
             <div class="col-12 buttons-container">
               <h2>Filter by Genre</h2>
-              <button id="new-releaseBtn" class= "btn btn-secondary half-width" onclick="filterByCategory('new-release')">✨ New Arrival</button>
-              <button id="pre-orderBtn" class= "btn btn-secondary half-width" onclick="filterByCategory('pre-order')">⌛ Pre-order</button>
-              <button id="rcmd-boyBtn" class= "btn btn-secondary half-width" onclick="filterByCategory('rcmd-boy')">👑 Recommended for Boys</button>
-              <button id="rcmd-girlBtn" class= "btn btn-secondary half-width" onclick="filterByCategory('rcmd-girl')">👑 Recommended for Girls</button>
-              <button id="action-adventureBtn" class= "btn btn-secondary" onclick="filterByCategory('action-adventure')">Action / Adventure</button>
-              <button id="beat-em-upBtn" class= "btn btn-secondary" onclick="filterByCategory('beat-em-up')">Action / Beat-Em-Up</button>
-              <button id="hack-n-slashBtn" class= "btn btn-secondary" onclick="filterByCategory('hack-n-slash')">Action / Hack 'n' Slash</button>
-              <button id="stealthBtn" class= "btn btn-secondary" onclick="filterByCategory('stealth')">Action / Stealth</button>
-              <button id="aerial-combatBtn" class= "btn btn-secondary" onclick="filterByCategory('aerial-combat')">Aerial Combat</button>
-              <button id="card-battlerBtn" class= "btn btn-secondary" onclick="filterByCategory('card-battler')">Card Battler</button>
-              
-              <button id="dungeon-crawlerBtn" class= "btn btn-secondary" onclick="filterByCategory('dungeon-crawler')">Dungeon Crawler</button>
-              <button id="fightingBtn" class= "btn btn-secondary" onclick="filterByCategory('fighting')">Fighting</button>
-              <button id="fitnessBtn" class= "btn btn-secondary" onclick="filterByCategory('fitness')">Fitness</button>
-              <button id="interactive-fictionBtn" class= "btn btn-secondary" onclick="filterByCategory('interactive-fiction')">Interactive Fiction</button>
-              <button id="jump-n-shootBtn" class= "btn btn-secondary" onclick="filterByCategory('jump-n-shoot')">Jump 'n' Shoot</button>
-              <button id="mechaBtn" class= "btn btn-secondary" onclick="filterByCategory('mecha')">Mecha</button>
-              <button id="metroidvaniaBtn" class= "btn btn-secondary" onclick="filterByCategory('metroidvania')">Metroidvania</button>
-              <button id="partyBtn" class= "btn btn-secondary" onclick="filterByCategory('party')">Party</button>
-              <button id="2d-platformerBtn" class= "btn btn-secondary" onclick="filterByCategory('2d-platformer')">Platformer / 2D</button>
-              <button id="3d-platformerBtn" class= "btn btn-secondary" onclick="filterByCategory('3d-platformer')">Platformer / 3D</button>
-              <button id="puzzle-platformerBtn" class= "btn btn-secondary" onclick="filterByCategory('puzzle-platformer')">Platformer / Puzzle</button>
-              <button id="point-and-clickBtn" class= "btn btn-secondary" onclick="filterByCategory('point-and-click')">Point and Click</button>
-              <button id="puzzleBtn" class= "btn btn-secondary" onclick="filterByCategory('puzzle')">Puzzle</button>
-              <button id="puzzle-adventureBtn" class= "btn btn-secondary" onclick="filterByCategory('puzzle-adventure')">Puzzle / Adventure</button>
-              <button id="racingBtn" class= "btn btn-secondary" onclick="filterByCategory('racing')">Racing</button>
-              <button id="retro-compilationBtn" class= "btn btn-secondary" onclick="filterByCategory('retro-compilation')">Retro Compilation</button>
-              <button id="rhythmBtn" class= "btn btn-secondary" onclick="filterByCategory('rhythm')">Rhythm</button>
-              <button id="roguelikeBtn" class= "btn btn-secondary" onclick="filterByCategory('roguelike')">Roguelike</button>
-              <button id="action-rpgBtn" class= "btn btn-secondary" onclick="filterByCategory('action-rpg')">RPG / Action</button>
-              <button id="strategy-rpgBtn" class= "btn btn-secondary" onclick="filterByCategory('strategy-rpg')">RPG / Strategy</button>
-              <button id="turn-based-rpgBtn" class= "btn btn-secondary" onclick="filterByCategory('turn-based-rpg')">RPG / Turn-Based</button>
-              <button id="sandboxBtn" class= "btn btn-secondary" onclick="filterByCategory('sandbox')">Sandbox</button>
-              <button id="first-person-shooterBtn" class= "btn btn-secondary" onclick="filterByCategory('first-person-shooter')">Shooter / First Person</button>
-              <button id="rail-shooterBtn" class= "btn btn-secondary" onclick="filterByCategory('rail-shooter')">Shooter / Rail</button>
-              <button id="shooterBtn" class= "btn btn-secondary" onclick="filterByCategory('shooter')">Shooter / Shoot'em Up</button>
-              <button id="third-person-shooterBtn" class= "btn btn-secondary" onclick="filterByCategory('third-person-shooter')">Shooter / Third Person</button>
-              <button id="simulationBtn" class= "btn btn-secondary" onclick="filterByCategory('simulation')">Simulation</button>
-              <button id="sportsBtn" class= "btn btn-secondary" onclick="filterByCategory('sports')">Sports</button>
-              <button id="real-time-strategyBtn" class= "btn btn-secondary" onclick="filterByCategory('real-time-strategy')">Strategy / Real Time</button>
-              <button id="turn-based-strategyBtn" class= "btn btn-secondary" onclick="filterByCategory('turn-based-strategy')">Strategy / Turn-Based </button>
-              <button id="stylish-actionBtn" class= "btn btn-secondary" onclick="filterByCategory('stylish-action')">Stylish Action</button>
-              <button id="survivalBtn" class= "btn btn-secondary" onclick="filterByCategory('survival')">Survival</button>
-              <button id="survival-horrorBtn" class= "btn btn-secondary" onclick="filterByCategory('survival-horror')">Survival Horror</button>
-              
-              <button id="visual-novelBtn" class= "btn btn-secondary" onclick="filterByCategory('visual-novel')">Visual Novel</button>
-
-              <button id="allBtn" class= "btn btn-primary full-width active" onclick="filterByCategory('all')">💿 All Games</button>
+              <select id="filterSelect" class="form-select w-100 pse-select"></select>
+              <button id="clearFilterBtn" class="btn btn-primary full-width">🧼 Clear Filter</button>
             </div>
           
             <div id="gameList" class="row p-3 mt-4"></div>
+            <div id="noResults" class="row" style="display: none;">
+              <div class="col-12 mb-4">😵 Can't find anything, perhaps a different search or filter?</div>
+            </div>
+
               <script src="./assets/loadgames.js"></script>
               <script>
                 const htmlFile = window.location.pathname.split('/').pop();
@@ -122,7 +71,7 @@
                   filterDivs();
                   });
               </script>
-              <script src="./assets/sort-n-filter.js"></script>
+              <script src="./assets/filter-logic.js"></script>
 
           </div>
         </div>

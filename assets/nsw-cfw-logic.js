@@ -27,6 +27,7 @@ function initializeCfwFeatures() {
       storageSelect.addEventListener("change", () => {
         currentStorageLimit = parseInt(storageSelect.value, 10);
         updateStorageStatus();
+        updateLiteNgWarnings();
       });
     });
 
@@ -136,14 +137,26 @@ function initializeCfwFeatures() {
   } else {
     storageWarning.style.display = "none";
   }
+
+  updateCopyButtonState(totalSize);
 }
 
   // Copy to clipboard
   copyButton.addEventListener("click", () => {
-    const titles = selectedGames.map((g) => g.title).join("\n");
-    navigator.clipboard.writeText(titles).then(() => {
+    const storageName = storageSelect.options[storageSelect.selectedIndex].text;
+
+    const lines = selectedGames.map((g) => {
+      return `${g.title} (${formatSize(g.size)})`;
+    });
+
+    const totalSize = selectedGames.reduce((sum, g) => sum + g.size, 0);
+    const footer = `\n\n> ${selectedGames.length} game${selectedGames.length !== 1 ? 's' : ''} selected, total size: ${formatSize(totalSize)}`;
+
+    const fullText = `${storageName}\n\n${lines.join("\n")}${footer}`;
+
+    navigator.clipboard.writeText(fullText).then(() => {
       copyButton.textContent = "Copied!";
-      setTimeout(() => (copyButton.textContent = "Copy Titles to Clipboard"), 1500);
+      setTimeout(() => (copyButton.textContent = "📋 Copy Titles to Clipboard"), 1500);
     });
   });
 
@@ -153,6 +166,36 @@ function initializeCfwFeatures() {
     return gb >= 1
       ? `${gb.toFixed(2)} GB`
       : `${(bytes / (1024 * 1024)).toFixed(2)} MB`;
+  }
+
+  //Update Copy Button state
+  function updateCopyButtonState(totalSize) {
+    const disabled = selectedGames.length === 0 || totalSize > currentStorageLimit;
+    copyButton.disabled = disabled;
+
+    if (disabled) {
+      copyButton.classList.add("disabled");
+    } else {
+      copyButton.classList.remove("disabled");
+    }
+  }
+
+  function updateLiteNgWarnings() {
+    const selectedStorageText = storageSelect.options[storageSelect.selectedIndex].text.toLowerCase();
+    const isLite = selectedStorageText.includes("lite");
+
+    const allGames = document.querySelectorAll(".filter-target");
+
+    allGames.forEach(div => {
+      const categories = div.dataset.category.split(",");
+      const isLiteNg = categories.includes("lite-ng");
+
+      if (isLite && isLiteNg) {
+        div.classList.add("lite-ng-warning");
+      } else {
+        div.classList.remove("lite-ng-warning");
+      }
+    });
   }
 
   updateSelectedList();

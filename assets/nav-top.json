@@ -1,0 +1,8 @@
+[
+  { "label": "🏠 Home", "href": "index.html" },
+  { "label": "Switch", "href": "nsw.html" },
+  { "label": "Switch (CFW)", "href": "nsw-cfw.html" },
+  { "label": "Switch 2", "href": "nsw2.html" },
+  { "label": "PlayStation 4", "href": "ps4.html" },
+  { "label": "PlayStation 5", "href": "ps5.html" }
+]
