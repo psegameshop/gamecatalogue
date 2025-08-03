@@ -230,7 +230,7 @@ div[data-category*="pre-order"] figure{
 }
 
 .lite-ng-warning figure::before {
-	content: "Not Recommended for Lite";
+	content: "Not Good for Lite";
 }
 
 div[data-category*="pre-order"] figure::before {
@@ -247,7 +247,7 @@ div[data-category*="pre-order"] figure::before {
 	text-align: center;
 	height: 1rem;
 	margin-top: -1rem;
-	font-size: 80%;
+	font-size: calc(var(--pse-font-size) * 0.70);
 	width: 100%;
 }
 
@@ -350,6 +350,10 @@ div[data-category*="pre-order"] figure > .game-image{
 	border: 0.25rem solid #ffbf00;
 	height: 3rem;
 	line-height: 2.5;
+}
+
+.game-container{
+	margin-bottom: 1rem;
 }
 
 .game-container.selected figure{

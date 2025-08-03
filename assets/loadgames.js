@@ -4,7 +4,7 @@ function renderGames(gameData) {
 
   gameData.forEach(game => {
     const gameDiv = document.createElement("div");
-    gameDiv.className = "col-12 col-sm-6 col-md-4 col-lg-3 filter-target game-container";
+    gameDiv.className = "col-6 col-md-4 col-lg-3 filter-target game-container";
     gameDiv.setAttribute("data-category", game.category);
     gameDiv.setAttribute("data-date", game.date);
 
@@ -19,12 +19,12 @@ function renderGames(gameData) {
 
     gameDiv.innerHTML = `
       <div class="row">
-        <div class="col-4 col-sm-12 game-image-container">
+        <div class="col-12 game-image-container">
           <figure>
             <img class="img-fluid game-image" alt="${game.title}" src="${game.image}">
           </figure>
         </div>
-        <div class="col-8 col-sm-12 py-2 game-title-container">
+        <div class="col-12 py-2 game-title-container">
           <span class="game-title">${game.title}</span>
           ${sizeText}
           ${sizeHiddenSpan}
