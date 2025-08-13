@@ -380,7 +380,7 @@ div[data-category*="pre-order"] figure > .game-image{
 }
 
 .game-container.selected-over figure::before{
-	content: 'Not enough free space!';
+	content: 'Not enough space!';
 	display: block;
 	color: white;
 	text-transform: uppercase;
@@ -388,11 +388,12 @@ div[data-category*="pre-order"] figure > .game-image{
 	letter-spacing: 0.1rem;
 	text-align: center;
 	height: 1rem;
-	font-size: 80%;
+	font-size: calc(var(--pse-font-size) * 0.70);
 	width: 100%;
 	background-color: #fd0d6e;
 	z-index: 1;
     position: relative;
+	top:-0.4rem;
 }
 
 #noResults > div {
