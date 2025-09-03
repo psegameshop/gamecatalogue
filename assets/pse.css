@@ -10,7 +10,8 @@
 	--pse-emboss-highlight: #f4f8fa;
 	--pse-secondary-btn: #eff7fa;
 	--pse-secondary-btn-text: #707e93;
-	--pse-font-size: 1rem;
+	--pse-font-size: 1.1rem;
+	--pse-font: "Josefin Sans", serif;
 	--pse-gradient: linear-gradient(90deg, rgba(0,166,255,1) 0%, rgba(199,255,216,1) 100%);
 }
 
@@ -37,7 +38,7 @@ body{
 	background-color: var(--pse-bg);
 	background-position: center top;
 	font-size: var(--pse-font-size);
-	font-family: Nunito, serif;
+	font-family: var(--pse-font);
 	color: var(--pse-text);
 }
 
@@ -84,7 +85,7 @@ h1{
 }
 
 .search-magnify input{
-	width: calc(100% - 27px);
+	width: calc(100% - 32px);
 	border: none;
 	background: none;
 }
@@ -328,6 +329,7 @@ div[data-category*="pre-order"] figure > .game-image{
 	min-width: 1.5rem;
     background-color: #fd0d6e;
 	color: white;
+	line-height: 1;
 }
 
 #storageSummary{

@@ -8,6 +8,7 @@
 {"title": "Hitman: World of Assassination - Signature Edition","category": "third-person-shooter","date": "2025-06-05","image": "./assets/img/hitman-world-of-assassination-signature-edition-cover.avif"},
 {"title": "Hogwarts Legacy","category": "action-rpg","date": "2025-06-05","image": "./assets/img/hogwarts-legacy-cover.avif"},
 {"title": "Hololive Holo's Hanafuda","category": "puzzle","date": "2025-07-31","image": "./assets/img/hololive-holo-s-hanafuda-cover.avif"},
+{"title": "Kirby and the Forgotten Land - Nintendo Switch 2 Edition + Star-Crossed World","category": "3d-platformer","date": "2025-09-01","image": "./assets/img/kirby-and-the-forgotten-land-nintendo-switch-2-edition-star-crossed-world-cover.avif"},
 {"title": "Kunitsu-Gami: Path of the Goddess","category": "action-adventure","date": "2025-06-30","image": "./assets/img/kunitsu-gami-path-of-the-goddess-cover.avif"},
 {"title": "Little Nightmares III","category": "puzzle-platformer","date": "2025-08-07","image": "./assets/img/little-nightmares-iii-cover.avif"},
 {"title": "Mario Kart World","category": "racing","date": "2025-06-26","image": "./assets/img/mario-kart-world-cover.avif"},
@@ -26,6 +27,9 @@
 {"title": "Super Mario Party Jamboree - Nintendo Switch 2 Edition + Jamboree TV","category": "party","date": "2025-07-24","image": "./assets/img/super-mario-party-jamboree-nintendo-switch-2-edition-jamboree-tv-cover.avif"},
 {"title": "Survival Kids","category": "survival","date": "2025-06-05","image": "./assets/img/survival-kids-cover.avif"},
 {"title": "Tamagotchi Plaza","category": "simulation","date": "2025-06-26","image": "./assets/img/tamagotchi-plaza-cover.avif"},
+{"title": "The Legend of Heroes: Trails Beyond the Horizon - Deluxe Edition","category": "turn-based-rpg","date": "2026-01-15","image": "./assets/img/the-legend-of-heroes-trails-beyond-the-horizon-deluxe-edition-cover.avif"},
 {"title": "The Legend of Zelda: Breath of the Wild","category": "action-adventure","date": "2025-06-26","image": "./assets/img/the-legend-of-zelda-breath-of-the-wild.avif"},
 {"title": "The Legend of Zelda: Tears of the Kingdom","category": "action-adventure","date": "2025-06-26","image": "./assets/img/the-legend-of-zelda-tears-of-the-kingdom-cover.avif"},
-{"title": "Yakuza 0 Director's Cut","category": "action-adventure","date": "2025-06-05","image": "./assets/img/yakuza-0-director-s-cut-cover.avif"}]
+{"title": "Yakuza 0 Director's Cut","category": "action-adventure","date": "2025-06-05","image": "./assets/img/yakuza-0-director-s-cut-cover.avif"},
+{"title": "Yakuza Kiwami","category": "action-adventure","date": "1900-01-00","image": "./assets/img/yakuza-kiwami.avif"},
+{"title": "Yakuza Kiwami 2","category": "action-adventure","date": "1900-01-00","image": "./assets/img/yakuza-kiwami-2.avif"}]
