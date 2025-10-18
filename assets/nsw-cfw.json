@@ -358,6 +358,7 @@
 {"title": "Pocoyo Party","category": "party","date": "1900-01-00","image": "./assets/img/pocoyo-party.avif","size": 1996488704},
 {"title": "Pokemon Brilliant Diamond","category": "turn-based-rpg","date": "1900-01-00","image": "./assets/img/pokemon-diamond-pearl-remake-cover-brilliant-diamond.avif","size": 7985954816},
 {"title": "Pokemon Legends Arceus","category": "turn-based-rpg","date": "1900-01-00","image": "./assets/img/pokemon-legends-arceus-cover.avif","size": 7985954816},
+{"title": "Pokemon Legends: Z-A","category": "action-rpg","date": "2025-10-16","image": "./assets/img/pokemon-legends-z-a-cover.avif","size": 4367806464},
 {"title": "Pokemon: Let's Go Eevee!","category": "turn-based-rpg,rcmd-boy,rcmd-girl","date": "1900-01-00","image": "./assets/img/pokemon-let-s-go-eevee.avif","size": 7985954816},
 {"title": "Pokemon: Let's Go Pikachu!","category": "turn-based-rpg,rcmd-boy,rcmd-girl","date": "1900-01-00","image": "./assets/img/pokemon-let-s-go-pikachu.avif","size": 7985954816},
 {"title": "Pokemon Mystery Dungeon: Rescue Team DX","category": "dungeon-crawler,rcmd-boy,rcmd-girl","date": "1900-01-00","image": "./assets/img/pokemon-mystery-dungeon-rescue-team-dx.avif","size": 3992977408},
