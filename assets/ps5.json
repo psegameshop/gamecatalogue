@@ -30,6 +30,7 @@
 {"title": "Balan Wonderworld","category": "3d-platformer","date": "1900-01-00","image": "./assets/img/balan-wonderworld-cover.avif"},
 {"title": "Barbie Horse Trails","category": "puzzle-adventure","date": "2025-10-10","image": "./assets/img/barbie-horse-trails-cover.avif"},
 {"title": "Battlefield 6","category": "first-person-shooter","date": "2025-10-10","image": "./assets/img/battlefield-6-cover.avif"},
+{"title": "Battlefield 6 - Phantom Edition","category": "first-person-shooter","date": "2025-10-10","image": "./assets/img/battlefield-6-phantom-edition-cover.avif"},
 {"title": "Bendy and the Dark Revival","category": "survival-horror","date": "2025-09-26","image": "./assets/img/bendy-and-the-dark-revival-cover.avif"},
 {"title": "Bitmap Bureau Collection","category": "retro-compilation","date": "1900-01-00","image": "./assets/img/bitmap-bureau-collection-cover.avif"},
 {"title": "Black Myth Wukong - Deluxe Edition","category": "action-rpg","date": "1900-01-00","image": "./assets/img/black-myth-wukong-deluxe-edition-cover.avif"},
@@ -377,6 +378,7 @@
 {"title": "WWE 2K23 - Deluxe Edition","category": "fighting","date": "1900-01-00","image": "./assets/img/wwe-2k23-deluxe-edition.avif"},
 {"title": "WWE 2K24","category": "fighting","date": "1900-01-00","image": "./assets/img/wwe-2k24-cover.avif"},
 {"title": "WWE 2K25","category": "fighting","date": "2025-03-14","image": "./assets/img/wwe-2k25-cover.avif"},
+{"title": "Yakuza Kiwami 3 & Dark Ties","category": "action-adventure","date": "2026-02-12","image": "./assets/img/yakuza-kiwami-3-dark-ties-cover.avif"},
 {"title": "Yonder The Cloud Catcher Chronicles","category": "simulation","date": "1900-01-00","image": "./assets/img/yonder-the-cloud-catcher-chronicles-cover.avif"},
 {"title": "Ys IX: Monstrum Nox - Deluxe Edition","category": "action-rpg","date": "1900-01-00","image": "./assets/img/ys-9-monstrum-nox-cover.avif"},
 {"title": "Ys Memoire: The Oath of Felghana - D1 Refined Edition","category": "action-rpg","date": "2025-01-07","image": "./assets/img/ys-memoire-the-oath-of-felghana-d1-refined-edition-cover.avif"}]
