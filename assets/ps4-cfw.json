@@ -171,6 +171,7 @@
 {"title": "Soulcalibur VI","category": "fighting","date": "1900-01-00","image": "./assets/img/soulcalibur-vi.avif"},
 {"title": "SpongeBob SquarePants: The Cosmic Shake","category": "3d-platformer","date": "1900-01-00","image": "./assets/img/spongebob-squarepants-the-cosmic-shake-cover.avif"},
 {"title": "Star Wars Jedi: Survivor","category": "action-adventure","date": "1900-01-00","image": "./assets/img/star-wars-jedi-survivor.avif"},
+{"title": "Story of Seasons: Friends of Mineral Town","category": "simulation,rcmd-boy,rcmd-girl","date": "1900-01-00","image": "./assets/img/story-of-seasons-friends-of-mineral-town-cover.avif"},
 {"title": "Stray","category": "puzzle-platformer","date": "1900-01-00","image": "./assets/img/stray-cover.avif"},
 {"title": "Street Fighter V","category": "fighting","date": "1900-01-00","image": "./assets/img/street-fighter-v.avif"},
 {"title": "Street Fighter 6","category": "fighting","date": "1900-01-00","image": "./assets/img/street-fighter-6-cover.avif"},
