@@ -10,7 +10,7 @@ function initializeCfwFeatures() {
   let currentStorageLimit = 0;
 
   // Load storage options from JSON
-  fetch("./assets/storage.json")
+  fetch("./assets/storage-nsw.json")
     .then((res) => res.json())
     .then((storages) => {
       storages.forEach((s, idx) => {

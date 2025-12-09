@@ -65,7 +65,7 @@
               <script>
                 const htmlFile = window.location.pathname.split('/').pop();
                 const baseName = htmlFile.replace(/\.html$/, "");
-                const jsonFile = `./assets/${baseName}.json`;
+                const jsonFile = `./assets/game-${baseName}.json`;
                   loadGamesFromJson(jsonFile).then(() => {
                   initializeReleaseLabels();
                   filterDivs();

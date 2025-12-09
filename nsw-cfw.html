@@ -80,19 +80,17 @@
 
               <script src="./assets/loadgames.js"></script>
               <script src="./assets/filter-logic.js"></script>
-              <script src="./assets/nsw-cfw-logic.js"></script> <!-- This one only runs special logic for nsw-cfw.html -->
+              <script src="./assets/cfw-nsw-logic.js"></script> <!-- This one only runs special logic for nsw-cfw.html -->
 
               <script>
                 const page = window.location.pathname.split("/").pop();
                 const base = page.replace(/\.html$/, "");
-                const jsonFile = `./assets/${base}.json`;
-
-                loadGamesFromJson(jsonFile).then(() => {
+                const jsonFile = `./assets/game-${base}.json`;
+                  loadGamesFromJson(jsonFile).then(() => {
                   initializeReleaseLabels();
                   filterDivs();
-
                   if (page === "nsw-cfw.html") {
-                    initializeCfwFeatures(); // from nswCfwLogic.js
+                    initializeCfwFeatures(); // from the cfw-logic.js
                   }
                 });
               </script>

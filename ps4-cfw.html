@@ -42,6 +42,25 @@
             <h1 class="text-center">PlayStation 4 (CFW) Game Catalogue</h1>
             <div class="splash-border mt-3"></div>
             </div>
+
+            <div class="col-12 selection-container">
+              <h2>Storage Simulation</h2>
+              <div>
+                <label for="storageSelect">Available PS4</label>
+                <select id="storageSelect" class="form-select w-100 pse-select"></select>
+                
+              </div>
+              <label for="selectedGames" class="mt-2">Selected Games</label>
+              <div id="selectedGames" class=" mb-2"></div>
+              <div id="storageSummary">
+                <strong>Selected Games Size:</strong> <span id="selectedSize">0.00 GB</span> / <span id="storageInfo"></span>
+                <br><span class="text-muted">PS4 game sizes and disk spaces are approximate, sorry for inconvenience!</span>
+              </div>
+              <div id="storageWarning" style="display: none;"></div>
+              <button id="copyButton" class="w-100 btn btn-primary mt-2">📋 Copy Game List as Text</button>
+            </div>
+
+
             <div class="col-12 search-container">
               <h2>Search by Title</h2>
               <div class="search-magnify">
@@ -62,16 +81,21 @@
             </div>
 
               <script src="./assets/loadgames.js"></script>
+              <script src="./assets/filter-logic.js"></script>
+              <script src="./assets/cfw-ps4-logic.js"></script> <!-- Modified cfw script for PS4 -->
+
               <script>
-                const htmlFile = window.location.pathname.split('/').pop();
-                const baseName = htmlFile.replace(/\.html$/, "");
-                const jsonFile = `./assets/${baseName}.json`;
+                const page = window.location.pathname.split("/").pop();
+                const base = page.replace(/\.html$/, "");
+                const jsonFile = `./assets/game-${base}.json`;
                   loadGamesFromJson(jsonFile).then(() => {
                   initializeReleaseLabels();
                   filterDivs();
-                  });
+                  if (page === "ps4-cfw.html") {
+                    initializeCfwFeatures(); // from the cfw-logic.js
+                  }
+                });
               </script>
-              <script src="./assets/filter-logic.js"></script>
 
           </div>
         </div>
