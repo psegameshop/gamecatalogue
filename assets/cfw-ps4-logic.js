@@ -59,7 +59,7 @@ function initializeCfwFeatures() {
 
   if (selectedGames.length === 0) {
     const emptyNotice = document.createElement("div");
-    emptyNotice.textContent = "No games selected yet!";
+    emptyNotice.textContent = "Belum ada game yang terpilih!";
     emptyNotice.style.fontStyle = "italic";
     emptyNotice.style.color = "#777";
     selectedGamesContainer.appendChild(emptyNotice);

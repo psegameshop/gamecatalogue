@@ -47,6 +47,14 @@ body{
 	filter: grayscale(100%);
 }
 
+.rounded{
+	border-radius: 0.5rem;
+}
+
+.hover-zoom:hover{
+	transform: scale(1.025);
+}
+
 .nav-container{
 	border-bottom: 2px solid var(--pse-emboss-border);
 }
@@ -231,7 +239,7 @@ div[data-category*="pre-order"] figure{
 }
 
 .lite-ng-warning figure::before {
-	content: "Not Good for Lite";
+	content: "Tidak cocok di Lite";
 }
 
 div[data-category*="pre-order"] figure::before {
@@ -302,7 +310,7 @@ div[data-category*="pre-order"] figure > .game-image{
 }
 
 #selectedGames:empty::before {
-  content: "No games selected yet!";
+  content: "Belum ada game yang terpilih!";
   display: block;
   font-style: italic;
   color: #777;
@@ -382,7 +390,7 @@ div[data-category*="pre-order"] figure > .game-image{
 }
 
 .game-container.selected-over figure::before{
-	content: 'Not enough space!';
+	content: 'Tidak muat!';
 	display: block;
 	color: white;
 	text-transform: uppercase;

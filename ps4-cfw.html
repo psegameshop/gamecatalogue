@@ -3,21 +3,21 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>PS Enterprise - PlayStation 4 Game Catalogue</title>
+    <title>PS Enterprise - Katalog Game PlayStation 4 (CFW)</title>
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="canonical" href="https://psegameshop.github.io/gamecatalogue/ps4-cfw.html">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Josefin+Sans">
-    
-    <meta name="description" content="PS Enterprise's PlayStation 4 Custom Firmware (CFW) game list">
-    <meta property="og:title" content="PS Enterprise - PlayStation 4 Custom Firmware (CFW) Game Catalogue">
+
+    <meta name="description" content="Yuk lihat game-game PlayStation 4 Custom Firmware (CFW) yang ada di PSe!"">
+    <meta property="og:title" content="PS Enterprise - Katalog Game PlayStation 4 Custom Firmware (CFW)">
     <meta property="og:type" content="website">
     <meta property="og:image" content="./assets/img/nav/hero-banner-ps4.webp">
     <meta property="og:url" content="https://psegameshop.github.io/gamecatalogue/ps4-cfw.html">
-    <meta property="og:description" content="Checkout our PlayStation 4 Custom Firmware (CFW) games!">
+    <meta property="og:description" content="Yuk lihat game-game PlayStation 4 Custom Firmware (CFW) yang ada di PSe!">
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="PS Enterprise - PlayStation 4 Custom Firmware (CFW) Game Catalogue">
-    <meta name="twitter:description" content="Checkout our PlayStation 4 Custom Firmware (CFW) games!">
+    <meta name="twitter:title" content="PS Enterprise - Katalog Game PlayStation 4 Custom Firmware (CFW)">
+    <meta name="twitter:description" content="Yuk lihat game-game PlayStation 4 Custom Firmware (CFW) yang ada di PSe!">
     <meta name="twitter:image" content="./assets/img/nav/hero-banner-ps4.webp">
 
     <!-- Bootstrap core CSS -->
@@ -27,9 +27,6 @@
 
   <body>
     <header>
-      <div class="text-center lounge-banner py-1">
-        <span class="">PLAY FOR FREE @ PSe Sony PlayLounge</span>
-      </div>
       <div id="nav-top-container" class="nav-container pt-3 pb-3 mb-3"></div>
       <script src="./assets/nav-top.js"></script>
     </header>
@@ -39,45 +36,45 @@
         <div class="container">
           <div class="row g-5">
             <div class="col-12 splash-container">
-            <h1 class="text-center">PlayStation 4 (CFW) Game Catalogue</h1>
+            <h1 class="text-center">Katalog Game PlayStation 4 (CFW)</h1>
             <div class="splash-border mt-3"></div>
             </div>
 
             <div class="col-12 selection-container">
-              <h2>Storage Simulation</h2>
+              <h2>Simulasi Kapasitas</h2>
               <div>
-                <label for="storageSelect">Available PS4</label>
+                <label for="storageSelect">Model PS4</label>
                 <select id="storageSelect" class="form-select w-100 pse-select"></select>
                 
               </div>
-              <label for="selectedGames" class="mt-2">Selected Games</label>
+              <label for="selectedGames" class="mt-2">Game Terpilih</label>
               <div id="selectedGames" class=" mb-2"></div>
               <div id="storageSummary">
-                <strong>Selected Games Size:</strong> <span id="selectedSize">0.00 GB</span> / <span id="storageInfo"></span>
-                <br><span class="text-muted">PS4 game sizes and disk spaces are approximate, sorry for inconvenience!</span>
+                <strong>Total ukuran game terpilih:</strong> <span id="selectedSize">0.00 GB</span> / <span id="storageInfo"></span>
+                <br><span class="text-muted">Ukuran game PS4 dan kebutuhan ruang penyimpanannya merupakan perkiraan. Mohon maaf atas ketidaknyamanannya.</span>
               </div>
               <div id="storageWarning" style="display: none;"></div>
-              <button id="copyButton" class="w-100 btn btn-primary mt-2">📋 Copy Game List as Text</button>
+              <button id="copyButton" class="w-100 btn btn-primary mt-2">📋 Salin Daftar Game sebagai Teks</button>
             </div>
 
 
             <div class="col-12 search-container">
-              <h2>Search by Title</h2>
+              <h2>Cari Judul</h2>
               <div class="search-magnify">
               <span class="search-icon">🔍</span>
-              <input type="text" id="searchInput" placeholder="Search..." onkeyup="filterDivs()">
+              <input type="text" id="searchInput" placeholder="Ketik judul di sini..." onkeyup="filterDivs()">
               </div>
-              <button class= "btn btn-primary full-width" onclick="clearSearch()">🧼 Clear Search</button>
+              <button class= "btn btn-primary full-width" onclick="clearSearch()">🧼 Hapus Pencarian</button>
             </div>
             <div class="col-12 buttons-container">
-              <h2>Filter by Genre</h2>
+              <h2>Filter Genre</h2>
               <select id="filterSelect" class="form-select w-100 pse-select"></select>
-              <button id="clearFilterBtn" class="btn btn-primary full-width">🧼 Clear Filter</button>
+              <button id="clearFilterBtn" class="btn btn-primary full-width">🧼 Hapus Filter</button>
             </div>
             
             <div id="gameList" class="row p-3 mt-4"></div>
             <div id="noResults" class="row" style="display: none;">
-              <div class="col-12 mb-4">😵 Can't find anything, perhaps a different search or filter?</div>
+              <div class="col-12 mb-4">😵 Waduh, nggak ketemu! Coba kata kunci atau filter lain?</div>
             </div>
 
               <script src="./assets/loadgames.js"></script>
